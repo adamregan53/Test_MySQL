@@ -1,7 +1,8 @@
 const mysql = require("mysql");
 
 const connection = mysql.createConnection({
-    host: '83.212.127.135:8083',
+    host: 'localhost',
+    port: '3036',
     user: 'root',
     password: 'my-password',
     database: 'testdb'
@@ -11,6 +12,8 @@ connection.connect(function(err){
     if(err){
         console.log(err.code)
         console.log(err.fatal)
+    }else{
+        console.log("connected to host")
     }
 });
 
